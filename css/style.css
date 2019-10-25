@@ -1,0 +1,22 @@
+h1
+  {
+    Spadding: 3rem;
+    color:White;
+    margin: 3rem;
+      font-family: 'Anton', sans-serif;
+    text-align: center;
+
+
+  }
+
+body {
+  background-image: url("Africa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  font-family: 'Anton', sans-serif;
+  color:white;
+  font-size: 20px;
+}
