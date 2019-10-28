@@ -1,46 +1,68 @@
 function myForm() {
-  var day = parseInt(document.getElementById("day").value);
-  var month = parseInt(document.getElementById("month").value);
-  var year = parseInt(document.getElementById("year").value);
-  var gender = (document.getElementById("gender").value);
+  var birthday = (document.getElementById("birthday").value);
+  var gender =document.getElementsByName("Gender");
+  var d = new Date(birthday);
+  var dd = parseInt(d.getDate());
+  var mm = parseInt(d.getMonth());
+  var yy = (d.getFullYear());
 
-  var c = parseInt(year.slice(0,2));
-  var y = parseInt(year.slice(2,4));
 
-  var weekday = ( ( (c/4) -2*c-1) + ((5*y/4) ) + ((26*(month+1)/10)) + day ) % 7;
-  var wd = weekday.toFixed(0);
+
+  var c = yy.toString().split('');
+  var cv = c.map(String);
+  var cy =parseInt(cv[0].concat(cv[1]));
+  var y =parseInt(cv[2].concat(cv[3]));
+
+//var weekday = Math.trunc((((cy/4) - 2 * cy - 1) + ((5 * y/4)) + ((26 * mm + 1)/10)) + dd ) %7;
+
+  var df = d.getDay();
+
+  //alert(df);
+  //var wd = weekday.toFixed(0);
+  var sd = df.toString();
+  var result = sd;
+
 
 
   var mname = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   var fname = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-if(gender=="male" && wd=0) { return document.getElementById("result").innerHTML=mname[0];
-}
-else if(gender=="male" && wd=1){return document.getElementById("result").innerHTML=mname[1];
-}
-else if(gender=="male" && wd=2){return document.getElementById("result").innerHTML=mname[2];
-}
-else if(gender=="male" && wd=3){return document.getElementById("result").innerHTML=mname[3];
-}
-else if(gender=="male" && wd=4){return document.getElementById("result").innerHTML=mname[4];
- }
-else if(gender=="male" && wd=5){return document.getElementById("result").innerHTML=mname[5];
- }
- else if(gender=="male" && wd=6){return document.getElementById("result").innerHTML=mname[6];
+for(x=0;x<gender.length;x++){
+  if(gender[x].checked){
+    var genders = gender[x].value;
+  }
 }
 
-else if (gender=="female" && wd=0){return document.getElementById("result").innerHTML=fname[0];
-  }
-else if(gender=="female" && wd=1){return document.getElementById("result").innerHTML=fname[1];
+//alert(genders);
+
+  if(genders==="male" && sd==="0"){var out = document.getElementById("result").value=mname[0];
+  //alert(out);
 }
-else if(gender=="female" && wd=2){return document.getElementById("result").innerHTML=fname[2];
+else if(genders==="male" && sd==="1"){var out = document.getElementById("result").value=mname[1];
 }
-else if(gender=="female" && wd=3){return document.getElementById("result").innerHTML=fname[3];
- }
-else if(gender=="female" && wd=4){return document.getElementById("result").innerHTML=fname[4];
- }
- else if(gender=="female" && wd=5){return document.getElementById("result").innerHTML=fname[5];
+else if(genders==="male" && sd==="2"){var out = document.getElementById("result").value=mname[2];
 }
-else if(gender=="female" && wd=6){return document.getElementById("result").innerHTML=fname[6]
+else if(genders==="male" && sd==="3"){var out = document.getElementById("result").value=mname[3];
+}
+else if(genders==="male" && sd==="4"){var out = document.getElementById("result").value=mname[4];
+}
+else if(genders==="male" && sd==="5"){var out = document.getElementById("result").value=mname[5];
+}
+ else if(genders==="male" && sd==="6"){var out = document.getElementById("result").value=mname[6];
+}
+
+else if (genders==="female" && sd==="0"){var out = document.getElementById("result").value=fname[0];
+}
+else if(genders==="female" && sd==="1"){var out = document.getElementById("result").value=fname[1];
+}
+else if(genders==="female" && sd==="2"){var out = document.getElementById("result").value=fname[2];
+}
+else if(genders==="female" && sd==="3"){var out = document.getElementById("result").value=fname[3];
+}
+else if(genders==="female" && sd==="4"){var out = document.getElementById("result").value=fname[4];
+}
+ else if(genders==="female" && sd==="5"){var out = document.getElementById("result").value=fname[5];
+}
+else if(genders==="female" && sd==="6"){var out = document.getElementById("result").value=fname[6];
 }
 }

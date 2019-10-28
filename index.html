@@ -8,8 +8,6 @@
     <title>Akan naming system</title>
   </head>
   <body>
-
-
         <div class="container">
 
         <h1>AKAN NAMING SYSTEM</h1>
@@ -18,33 +16,31 @@
 
 
         <p>Enter your birthday details.</p>
-        <hr>
+
 
         <form onsubmit="result=false">
 
+          <fieldset>
+        <legend>Enter your birthday details</legend>
 
-        <label for="Day">Day</label>
-        <input type="number" id="day" placeholder="Enter date" name="day" required>
-        <br>
-
-        <label for="month">Month</label>
-        <input type="number" id="month" placeholder="Enter month" name="month" min="1" max="12" required>
-        <br>
-
-        <label for="year">Year</label>
-        <input type="number" id="year" placeholder="Enter year" name="year" required>
-        <br>
+        <label for="birthday">birthday</label>
+        <input type="date" id="birthday"
+         min="1900-01-01" max="2019-12-31">
 
         <label for="Gender">Gender</label>
-        <input type="radio" id="gender" value="male"> Male
-        <input type="radio" id="gender" value="female"> Female
+        <input type="radio" id="genderm" value="male" name="Gender" checked> Male
+        <input type="radio" id="genderf" value="female" name="Gender" checked> Female
         <br>
-        <hr>
+        </fieldset>
 
-        <button type="button" onclick="myForm()" >Submit</button><br>
-        <p id="result"output></p>
-        <p> The names are given based on gender also.</p>
+
+        <input type="button" value="submit" onclick="myForm()">
+          <br>
+        <p> The names are given based on gender and the day of birth.</p>
+        </element>
     </form>
+    <p>Your Akan name is:</p>
+    <input type="text" id="result">
    </div>
 
   <script src="js/main.js"></script>
