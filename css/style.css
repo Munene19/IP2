@@ -13,6 +13,7 @@ body {
   background-image: url("Africa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'fantasy';
 }
 
 p {
