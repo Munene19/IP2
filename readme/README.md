@@ -7,4 +7,4 @@
 
 #### This is a web platform that assign names based on the date of birth and gender.Users input their data and receive their AKAN names
 
-# ![landing page](image/landing.png)   
+![landing page](image/landing.png)   
